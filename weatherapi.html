@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<div id="container">
+    <div data-city="city" id="cityDiv"></div>
+    <form id="user-form">
+        <label for="user-input" id="search">Search City Weather</label>
+        <input type="add-city" id="city" type="text">
+    </form>
+</div>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $("#city").on('blur', function () {
+            var cityQuery = $('#city').val();
+            var queryURL = `http://dataservice.accuweather.com/locations/v1/cities/US/search?q=${cityQuery}&apikey=R5oXskLP3OTmed5hk6d31Fq7DJYEMAFu`;
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            }).done(function (response) {
+                console.log(response);
+                $('#cityDiv').html("");
+                var cityDiv = '';
+                for (var i = 0, ii = response.length; i < ii; i++) {
+                    var city = response[i].LocalizedName;
+                    var state = response[i].AdministrativeArea.ID;
+                    cityDiv += `<p>The current weather conditions ${city}, ${state}<p>`;
+                }
+                $("#cityDiv").html(cityDiv);
+
+
+            });
+        })
+
+
+    </script>
+</body>
+
+</html>
