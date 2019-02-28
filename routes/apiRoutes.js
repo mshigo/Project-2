@@ -1,9 +1,9 @@
 var db = require("../models");
 
 module.exports = function (app) {
-  // Get all events in database
-  app.get("/api/events", function (req, res) {
-    db.Event.findAll({})
+  // Get all meetings in database
+  app.get("/api/meetings", function (req, res) {
+    db.Meeting.findAll({})
       .then(function (dbEvents) {
         return res.json(dbEvents);
       })
@@ -12,9 +12,9 @@ module.exports = function (app) {
       });
   });
 
-  //PUT route to update event by id
-  app.put("/api/event/:id", function (req, res) {
-    db.Event.update(req.body, {
+  //PUT route to update meeting by id
+  app.put("/api/meeting/:id", function (req, res) {
+    db.Meeting.update(req.body, {
       where: {
         id: req.params.id
       }
@@ -27,9 +27,9 @@ module.exports = function (app) {
       })
   });
 
-  // Get all events with certain breed
-  app.get("/api/events/:breed", function (req, res) {
-    db.Event.findAll({
+  // Get all meetings with certain breed
+  app.get("/api/meetings/:breed", function (req, res) {
+    db.Meeting.findAll({
       where: {
         breed: req.params.breed
       }
@@ -42,9 +42,9 @@ module.exports = function (app) {
       });
   });
 
-  // Get all events with certain category
-  app.get("/api/events/:category", function (req, res) {
-    db.Event.findAll({
+  // Get all meetings with certain category
+  app.get("/api/meetings/:category", function (req, res) {
+    db.Meeting.findAll({
       where: {
         category: req.params.category
       }
@@ -58,8 +58,8 @@ module.exports = function (app) {
   });
 
   // Create a new event
-  app.post("/api/new/event", function (req, res) {
-    db.Event.create(req.body)
+  app.post("/api/new/meeting", function (req, res) {
+    db.Meeting.create(req.body)
       .then(function (dbEvent) {
         return res.json(dbEvent);
       })
@@ -68,9 +68,9 @@ module.exports = function (app) {
       });
   });
 
-  // Delete an example by id
-  app.delete("/api/event/:id", function (req, res) {
-    db.Event.destroy({
+  // Delete an event by id
+  app.delete("/api/meeting/:id", function (req, res) {
+    db.Meeting.destroy({
       where: {
         id: req.params.id
       }
