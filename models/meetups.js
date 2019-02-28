@@ -37,7 +37,7 @@ module.exports = function (sequelize, DataTypes) {
             }
         },
         Date: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
@@ -49,7 +49,6 @@ module.exports = function (sequelize, DataTypes) {
                 len: [1]
             }
         },
-        freezeTableName: true
     });
     return Meeting;
 };

@@ -3,11 +3,11 @@ var db = require("../models");
 module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
-    db.Event.findAll({})
-    .then(function (dbEvents) {
+    db.Meeting.findAll({})
+    .then(function (dbMeetings) {
       res.render("index", {
         msg: "Welcome!",
-        events: dbEvents
+        meetings: dbMeetings
       });
     })
     .catch(function(err){
@@ -15,16 +15,16 @@ module.exports = function (app) {
     });
   });
 
-  // Load event pagee by id
-  app.get("/event/:id", function (req, res) {
-    db.Event.findOne({
+  // Load meeting page by id
+  app.get("/meeting/:id", function (req, res) {
+    db.Meeting.findOne({
       where: {
         id: req.params.id
       }
     })
-      .then(function (dbEvent) {
-        res.render("event", {
-          event: dbEvent
+      .then(function (dbMeeting) {
+        res.render("meeting", {
+          meeting: dbMeeting
         });
       })
       .catch(function (err) {

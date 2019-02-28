@@ -24,7 +24,7 @@ var API = {
   },
   deleteMeeting: function(id) {
     return $.ajax({
-      url: "api/meetings/" + id,
+      url: "api/meeting/" + id,
       type: "DELETE"
     });
   }
@@ -96,4 +96,5 @@ var handleDeleteBtnClick = function() {
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+$meetingList.on("click", ".delete", handleDeleteBtnClick);
+rsvpCounter.on("click", handleCounter);
