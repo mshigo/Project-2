@@ -1,47 +1,47 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
+var $meetingText = $("#meeting-text");
+var $meetingDescription = $("#meeting-description");
 var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $meetingList = $("#meeting-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveMeeting: function(meeting) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "api/meeting",
+      data: JSON.stringify(meeting)
     });
   },
-  getExamples: function() {
+  getMeetings: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/meetings",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteMeeting: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/meetings/" + id,
       type: "DELETE"
     });
   }
 };
 
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
+// refreshMeetings gets new meetings from the db and repopulates the list
+var refreshMeetings = function() {
+  API.getMeetings().then(function(data) {
+    var $meetings = data.map(function(meeting) {
       var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+        .text(meeting.text)
+        .attr("href", "/meeting/" + meeting.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": example.id
+          "data-id": meeting.id
         })
         .append($a);
 
@@ -54,43 +54,43 @@ var refreshExamples = function() {
       return $li;
     });
 
-    $exampleList.empty();
-    $exampleList.append($examples);
+    $meetingList.empty();
+    $meetingList.append($meetings);
   });
 };
 
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
+// handleFormSubmit is called whenever we submit a new meeting
+// Save the new meeting to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+  var meeting = {
+    text: $meetingText.val().trim(),
+    description: $meetingDescription.val().trim()
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
+  if (!(meeting.text && meeting.description)) {
+    alert("You must enter a meeting text and description!");
     return;
   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
+  API.saveMeeting(meeting).then(function() {
+    refreshMeetings();
   });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+  $meetingText.val("");
+  $meetingDescription.val("");
 };
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
+// handleDeleteBtnClick is called when a meeting's delete button is clicked
+// Remove the meeting from the db and refresh the list
 var handleDeleteBtnClick = function() {
   var idToDelete = $(this)
     .parent()
     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
+  API.deleteMeeting(idToDelete).then(function() {
+    refreshMeetings();
   });
 };
 

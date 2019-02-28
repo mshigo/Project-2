@@ -15,7 +15,7 @@ module.exports = function (app) {
     });
   });
 
-  // Load event page and pass in an event by id
+  // Load event pagee by id
   app.get("/event/:id", function (req, res) {
     db.Event.findOne({
       where: {
