@@ -1,0 +1,145 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ /* sammy */
+ #logo-container {
+  color: #26a69a;
+
+}
+#formCard {
+  opacity: .85;
+}
+
+/* sammy */
+
+/* kristine */
+.home-page {
+  width: 100%;
+  margin-top: -50px;
+}
+.transbox {
+  opacity: .85;
+  }
+  /* discussion */
+   .responses {
+    color: #26a69a;
+  }
+  
+  .card-height {
+    height: 150px;
+    width: 300px;
+  }
+   .nav-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+   }
+  
+
+/* kristine */
+
+/* daniel */
+#logo-container {
+  color: #26a69a;
+}
+
+.card {
+  opacity: .75;
+}
+
+.header {
+  color: #26a69a;
+}
+
+/* daniel */
+
+
+
+
+
+
+
+
+
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container-daniel {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+
+  /* diannas css */
+
+  .reveal { 
+    height: 400px;
+  }
+
+  .weatherpic {
+    margin-top: 30px;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+  opacity: .85;
+}
+
+@media only screen and (max-width : 400px) {
+  #index-banner .section {
+    top: 0;
+  }
+  .icon-block .material-icons {
+    font-size: inherit;
+  }
+}
