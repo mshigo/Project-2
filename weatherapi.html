@@ -5,43 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Weather Search</title>
+
+
 </head>
 
-<div id="container">
-    <div data-city="city" id="cityDiv"></div>
-    <form id="user-form">
-        <label for="user-input" id="search">Search City Weather</label>
-        <input type="add-city" id="city" type="text">
-    </form>
-</div>
 
 <body>
+
+    <div id="container">
+        <div data-search="zip" id="cityDiv"></div>
+        <form id="user-form">
+            <label for="user-input" id="search">Search City Weather</label>
+            <input type="add-city" id="city" type="text" placeholder="Enter Zip Code">
+            <button type="submit" id="zip">Search</button>
+        </form>
+    </div>
+
+    <!-- <button data-search="City Name">City Name</button> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
-        $("#city").on('blur', function () {
-            var cityQuery = $('#city').val();
-            var queryURL = `http://dataservice.accuweather.com/locations/v1/cities/US/search?q=${cityQuery}&apikey=R5oXskLP3OTmed5hk6d31Fq7DJYEMAFu`;
+        $('button').on('click', function (event) {
+            event.preventDefault();
+            $("p").remove();
+
+            var zipQuery = $('#city').val();
+            console.log(zipQuery);
+
+            var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zipQuery},us&appid=f31d7f506fe23d7e12900adf7560d4eb&units=imperial`;
+            console.log(queryURL);
             $.ajax({
                 url: queryURL,
-                method: "GET"
+                method: 'GET'
             }).done(function (response) {
                 console.log(response);
                 $('#cityDiv').html("");
+
+
+                // use cityDiv and city to display city searched to user
                 var cityDiv = '';
-                for (var i = 0, ii = response.length; i < ii; i++) {
-                    var city = response[i].LocalizedName;
-                    var state = response[i].AdministrativeArea.ID;
-                    cityDiv += `<p>The current weather conditions ${city}, ${state}<p>`;
-                }
-                $("#cityDiv").html(cityDiv);
+                var city = response.city.name;
 
+                $('body').append("<p>Minimum Temperature: " + response.list[0].main.temp_min + "</p>");
+                $('body').append("<p>Maximum Temperature: " + response.list[0].main.temp_max + "</p>");
+                $('body').append("<p>Weather Conditions: " + response.list[0].weather[0].description + "</p>");
+                $('body').append("<p>Wind Speed: " + response.list[0].wind.speed + "</p>");
+                $('body').prepend("<p>The current weather conditions in " + response.city.name + "</p>")
 
-            });
+            })
+
+            $("#cityDiv").html(cityDiv);
         })
 
 
     </script>
+
+
+
+
 </body>
 
 </html>
