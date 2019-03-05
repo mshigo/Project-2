@@ -30,18 +30,23 @@
     color: #26a69a;
   }
 
-  .detail-card {
-    height: 210px;
-    width: 300px;
+  .going {
+    width: 400px;
+    margin-left: -20px;
   }
+/* 
+  .detail-card {
+    height: 230px;
+    width: 300px;
+  } */
   
   .card-height {
-    height: 210px;
+    height: 230px;
     width: 300px;
   }
 
   .card-height2 {
-    height: 175px;
+    height: 195px;
     width: 300px;
   }
 
