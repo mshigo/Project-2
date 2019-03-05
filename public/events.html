@@ -12,33 +12,38 @@
   <link href="style.css">
   <style>
   body{
-  background-image: url("dog2.jpg");
+  background-image: url("./images/dog2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-image: cover;
   }
   </style>
 </head>
 <body>
-    <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo center">Trail Tails</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="./form.html">Create</a></li>
-                <li><a href="./home-page.html">Home</a></li>
-            </ul>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo center">Trail Tails</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="./events.html">View</a></li>
+            <li><a href="./form.html">Create</a></li>
+            <li><a href="./home-page.html">Home</a></li>
+        </ul>
 
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="./home-page.html">Home</a></li>
-                <li><a href="./form.html">Create</a></li>
-            </ul>
-            <a href="./home-page.html" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
+        <ul id="nav-mobile" class="sidenav">
+            <li><a href="./home-page.html">Home</a></li>
+            <li><a href="./form.html">Create</a></li>
+            <li><a href="./events.html">View</a></li>
+        </ul>
+        <a href="./home-page.html" data-target="nav-mobile" class="sidenav-trigger"><i
+                class="material-icons">menu</i></a>
+    </div>
+</nav>
   <div id="index-banner" class="parallax-container-daniel">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
           <h2 class="header center" >Current Events</h2>
+          <div id="insert"></div>
           <div class="card horizontal card hoverable">
             <div class="card-stacked">
               <div class="card-content">
@@ -105,8 +110,8 @@
   </footer>
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
 
   </body>
 </html>

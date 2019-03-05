@@ -1,209 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Discussion Page</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
     <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
     <style>
-        img {
-            position: relative;
-            left: 0px;
-            top: 0px;
-            z-index: 3;
-        }
+      img {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        z-index: 3;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--    Nav Bar     -->
     <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo center">Trail Tails</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="./events.html">Join</a></li>
-                <li><a href="./form.html">Create</a></li>
-                <li><a href="./home-page.html">Home</a></li>
-            </ul>
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo center"
+          >Trail Tails</a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li><a href="./events.html">View</a></li>
+          <li><a href="./form.html">Create</a></li>
+          <li><a href="./home-page.html">Home</a></li>
+        </ul>
 
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="./home-page.html">Home</a></li>
-                <li><a href="./form.html">Create</a></li>
-                <li><a href="./events.html">Join</a></li>
-            </ul>
-            <a href="./home-page.html" data-target="nav-mobile" class="sidenav-trigger"><i
-                    class="material-icons">menu</i></a>
-        </div>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="./home-page.html">Home</a></li>
+          <li><a href="./form.html">Create</a></li>
+          <li><a href="./events.html">View</a></li>
+        </ul>
+        <a
+          href="./home-page.html"
+          data-target="nav-mobile"
+          class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+      </div>
     </nav>
     <!-- MAIN CONTAINER -->
     <div class="container">
-        <div class="section">
-
-            <!--   WEATHER API    -->
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="icon-block">
-
-                        <!-- CARD -->
-                        <h2 class="center brown-text"><i class="material-icons">cloud_queue</i></h2>
-
-                        <h6 class="responses">Don't Forget to Check the Weather</h6>
-                        <div class="card reveal">
-                            <div class="card-image waves-effect waves-block waves-light">
-
-                            </div>
-                            <div class="card-content">
-                                <h5 class="center"></h5>
-
-                                <div id="container">
-                                    <div data-search="zip" id="cityDiv"></div>
-                                    <form id="user-form activator">
-                                        <label for="user-input" id="search">Search City Weather</label>
-                                        <i
-                                            class="card-title activator grey-text text-darken-4 material-icons right ab">search</i>
-                                        <input type="add-city" id="city" type="text" placeholder="Enter Zip Code">
-                                        <img src="images/front-page_small.jpg" class="weatherpic">
-
-                                    </form>
-                                </div>
-
-
-
-                            </div>
-                            <!-- CARD END -->
-                            <!-- CARD REVEAL -->
-                            <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Forecast<i
-                                        class="material-icons right ab" type="button">close</i></span>
-                                <div class="weather activator">
-                                    <p class="light wea">
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END CARD REVEAL -->
-
-
-
-                    </div>
+      <div class="section">
+        <!--   WEATHER API    -->
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="icon-block">
+                    <h2 class="center brown-text">
+                            <i class="material-icons">view_headline</i>
+                          </h2>
+              <h6 class="responses teal-text">Event Details</h6>
+              <div class="card horizontal">
+                <div class="card-stacked">
+                  <div class="card-content detail-card">
+                    <h6>Breeds Allowed:</h6>
+                    <h6>Location:</h6>
+                    <h6>Date & Time:</h6>
+                    <h6>Name:</h6>
+                    <h6>Pet Name:</h6>
+                  </div>
                 </div>
-                <!--    WEATHER API END     -->
-                <!--     DOG BACKGROUND PICTURE START  -->
-                <div class="background-picture">
-                    <!--   RESPONSE PORTION START  -->
-                    <div class="col s12 m6">
+              </div>
 
-                        <div class="icon-block">
+              <!-- CARD -->
+              <h2 class="center brown-text">
+                <i class="material-icons">cloud_queue</i>
+              </h2>
 
-                            <h2 class="center brown-text"><i class="material-icons">pets</i></h2>
-                            <!-- WRITE A RESPONSE START -->
+              <h6 class="responses">Don't Forget to Check the Weather</h6>
+              <div class="card reveal">
+                <div
+                  class="card-image waves-effect waves-block waves-light"
+                ></div>
+                <div class="card-content">
+                  <h5 class="center"></h5>
 
-                            <h6 class="responses">Write a Response</h6>
-                            <div class="card horizontal">
-                                <div class="card-stacked">
-                                    <div class="card-content card-height">
-                                        <form>
-                                            <input type="text" placeholder="Start a discussion."><br>
-                                        </form>
-                                    </div>
-                                    <!--    SUBMIT BUTTON START --->
-                                    <button class="btn waves-effect waves-light" type="submit" name="action"
-                                        id="submit">Submit
-                                        <i class="material-icons right">send</i>
-                                    </button>
-                                    <!--    SUBMIT BUTTON END --->
-                                </div>
-                            </div>
-                            <!-- WRITE A RESPONSE END -->
-
-                            <!-- RESPONSE EXAMPLE 1 START -->
-                            <h6 class="responses brown-text">User Name</h6>
-                            <div class="card horizontal">
-                                <div class="card-stacked">
-                                    <div class="card-content card-height">
-                                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- RESPONSE EXAMPLE 1 END  -->
-
-                            <!-- RESPONSE EXAMPLE 2 START -->
-                            <h6 class="responses brown-text">User Name</h6>
-                            <div class="card horizontal">
-                                <div class="card-stacked">
-                                    <div class="card-content card-height">
-                                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- RESPONSE EXAMPLE 2 END  -->
-                        </div>
-                    </div>
-                    <!--  RESPONSE PORTION END   -->
-
-
+                  <div id="container">
+                    <div data-search="zip" id="cityDiv"></div>
+                    <form id="user-form activator">
+                      <label for="user-input" id="search"
+                        >Search City Weather</label
+                      >
+                      <i
+                        class="card-title activator grey-text text-darken-4 material-icons right ab"
+                        >search</i
+                      >
+                      <input
+                        type="add-city"
+                        id="city"
+                        type="text"
+                        placeholder="Enter Zip Code"
+                      />
+                      <img
+                        src="images/front-page_small.jpg"
+                        class="weatherpic responsive"
+                      />
+                    </form>
+                  </div>
                 </div>
-                <!-- DOG PICTURE END -->
+                <!-- CARD END -->
+                <!-- CARD REVEAL -->
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4"
+                    >Forecast<i class="material-icons right ab" type="button"
+                      >close</i
+                    ></span
+                  >
+                  <div class="weather activator">
+                    <p class="light wea"></p>
+                  </div>
+                </div>
+              </div>
+              <!-- END CARD REVEAL -->
             </div>
-        </div>
+          </div>
+          <!--    WEATHER API END     -->
+          <!--     DOG BACKGROUND PICTURE START  -->
+          <div class="background-picture">
+            <!--   RESPONSE PORTION START  -->
+            <div class="col s12 m6">
+              <div class="icon-block">
+                <h2 class="center brown-text">
+                  <i class="material-icons">pets</i>
+                </h2>
+                <!-- WRITE A RESPONSE START -->
 
+                <h6 class="responses">Write a Comment</h6>
+                <div class="card horizontal">
+                  <div class="card-stacked">
+                    <div class="card-content card-height2">
+                      <form>
+                        <input
+                          type="text"
+                          placeholder="Start a discussion."
+                        /><br />
+                      </form>
+                    </div>
+                    <!--    SUBMIT BUTTON START --->
+                    <button
+                      class="btn waves-effect waves-light"
+                      type="submit"
+                      name="action"
+                      id="submit"
+                    >
+                      Submit
+                      <i class="material-icons right">send</i>
+                    </button>
+                    <!--    SUBMIT BUTTON END --->
+                  </div>
+                </div>
+                <!-- WRITE A RESPONSE END -->
+
+                <!-- RESPONSE EXAMPLE 1 START -->
+                <h2 class="center brown-text">
+                        <i class="material-icons">comment</i>
+                      </h2>
+                <h6 class="responses brown-text">Comments</h6>
+                <div class="card horizontal">
+                  <div class="card-stacked">
+                    <div class="card-content card-height">
+                      <h6>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+                <!-- RESPONSE EXAMPLE 1 END  -->
+
+                <!-- RESPONSE EXAMPLE 2 START -->
+                <h6 class="responses brown-text">Comments</h6>
+                <div class="card horizontal">
+                  <div class="card-stacked">
+                    <div class="card-content card-height">
+                      <h6>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit.
+                      </h6>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- RESPONSE EXAMPLE 2 END  -->
+              </div>
+            </div>
+            <!--  RESPONSE PORTION END   -->
+          </div>
+          <!-- DOG PICTURE END -->
+        </div>
+      </div>
     </div>
     <!--    FOOTER   -->
-    <footer class="page-footer teal">
-    </footer>
-
+    <footer class="page-footer teal"></footer>
 
     <!--  SCRIPTS   -->
-
 
     <script src="../js/materialize.js"></script>
     <script src="../js/init.js"></script>
 
     <!-- script for weather API -->
     <script type="text/javascript">
-        $(".ab").on('click', function (event) {
-            event.preventDefault();
-            $("p").remove();
+      $(".ab").on("click", function(event) {
+        event.preventDefault();
+        $("p").remove();
 
-            var zipQuery = $('#city').val();
-            console.log(zipQuery);
+        var zipQuery = $("#city").val();
+        console.log(zipQuery);
 
-            var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zipQuery},us&appid=f31d7f506fe23d7e12900adf7560d4eb&units=imperial`;
-            console.log(queryURL);
-            $.ajax({
-                url: queryURL,
-                method: 'GET'
-            }).done(function (response) {
-                console.log(response);
-                $('#cityDiv').html("");
+        var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zipQuery},us&appid=f31d7f506fe23d7e12900adf7560d4eb&units=imperial`;
+        console.log(queryURL);
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).done(function(response) {
+          console.log(response);
+          $("#cityDiv").html("");
 
+          // use cityDiv and city to display city searched to user
+          var cityDiv = "";
+          var city = response.city.name;
 
-                // use cityDiv and city to display city searched to user
-                var cityDiv = '';
-                var city = response.city.name;
+          $(".weather").append(
+            "<p>Minimum Temperature (°F): " +
+              response.list[0].main.temp_min +
+              "</p>"
+          );
+          $(".weather").append(
+            "<p>Maximum Temperature (°F): " +
+              response.list[0].main.temp_max +
+              "</p>"
+          );
+          $(".weather").append(
+            "<p>Weather Conditions: " +
+              response.list[0].weather[0].description +
+              "</p>"
+          );
+          $(".weather").append(
+            "<p>Wind Speed: " + response.list[0].wind.speed + "</p>"
+          );
+          $(".weather").prepend(
+            "<h5>The current weather conditions in " +
+              response.city.name +
+              "</h5 >"
+          );
+        });
 
-                $('.weather').append("<p>Minimum Temperature (°F): " + response.list[0].main.temp_min + "</p>");
-                $('.weather').append("<p>Maximum Temperature (°F): " + response.list[0].main.temp_max + "</p>");
-                $('.weather').append("<p>Weather Conditions: " + response.list[0].weather[0].description + "</p>");
-                $('.weather').append("<p>Wind Speed: " + response.list[0].wind.speed + "</p>");
-                $('.weather').prepend("<h5>The current weather conditions in " + response.city.name + "</h5 >")
-
-            })
-
-            $("#cityDiv").html(cityDiv);
-        })
-
-
+        $("#cityDiv").html(cityDiv);
+      });
     </script>
-
-</body>
-
+  </body>
 </html>

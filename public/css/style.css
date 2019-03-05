@@ -18,10 +18,10 @@
 /* sammy */
 
 /* kristine */
-.home-page {
+/* .home-page {
   width: 100%;
   margin-top: -50px;
-}
+} */
 .transbox {
   opacity: .85;
   }
@@ -29,11 +29,22 @@
    .responses {
     color: #26a69a;
   }
-  
-  .card-height {
-    height: 150px;
+
+  .detail-card {
+    height: 210px;
     width: 300px;
   }
+  
+  .card-height {
+    height: 210px;
+    width: 300px;
+  }
+
+  .card-height2 {
+    height: 175px;
+    width: 300px;
+  }
+
    .nav-wrapper {
   position: fixed;
   top: 0;
@@ -105,6 +116,11 @@ p {
 
   .weatherpic {
     margin-top: 30px;
+  }
+  
+  .responsive {
+    width: 100%;
+    height: auto;
   }
 
 @media only screen and (max-width : 992px) {
