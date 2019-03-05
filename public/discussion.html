@@ -78,6 +78,7 @@
                                     <h6>Date & Time:</h6>
                                     <h6>Name:</h6>
                                     <h6>Pet Name:</h6>
+                                    <h6 id="count"></h6>
                               </div>
                               <!--    GOING BUTTON START --->
                               <button
@@ -278,6 +279,25 @@
 
         $("#cityDiv").html(cityDiv);
       });
+
+
+      var count = 0;
+      $("#submit").click(function(){
+          count ++;
+          $("#count").html("Going: "+count);
+      })
     </script>
   </body>
 </html>
+
+<!-- $(document).ready(function() {
+    var count = 0;
+    
+      $("#update").click(function() {
+        count++;
+        $("#counter").html("My current count is: "+count);
+      }
+    
+    });
+    
+    <div id="counter"></div> -->
