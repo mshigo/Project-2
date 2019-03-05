@@ -161,10 +161,11 @@
                 <div class="card horizontal">
                   <div class="card-stacked">
                     <div class="card-content card-height2">
-                      <form>
+                      <form id="myForm">
                         <input
                           type="text"
                           id="text"
+                          maxlength="60"
                           placeholder="Start a discussion."
                         /><br />
                       </form>
@@ -193,8 +194,8 @@
                   <div class="card-stacked">
                     <div class="card-content card-height">
                       <h6> -->
-                        <div id="comment-cards"></div>
-                      <!-- </h6>
+                <div id="comment-cards"></div>
+                <!-- </h6>
                     </div>
                   </div>
                 </div> -->
@@ -282,14 +283,13 @@
             .trim()
         };
         console.log(input);
-        $("#comment-cards").append("<div class=card horizontal><div class=card-stacked><div class=card-content card-height>"+ input.comment + "</div></h6></div></div></div>");
+        $("#comment-cards").prepend(
+          "<div class=card horizontal><div class=card-stacked><div class=card-content card-height>" +
+            input.comment +
+            "</div></h6></div></div></div>"
+        );
+        $("#myForm")[0].reset();
       });
-
-    //   $(document).ready(function() {
-    //     $("button.plus").on("click", function() {
-    //       $("div:last").after("<div class=item><p>Title</p></div>");
-    //     });
-    //   });
     </script>
   </body>
 </html>

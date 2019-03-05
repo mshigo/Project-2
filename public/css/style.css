@@ -30,6 +30,11 @@
     color: #26a69a;
   }
 
+  #myTextArea {
+    height: 180px;
+    width: 430px;
+  }
+
   .going {
     width: 400px;
     margin-left: -20px;
