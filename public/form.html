@@ -29,15 +29,15 @@
                   <div class="nav-wrapper container">
                       <a id="logo-container" href="#" class="brand-logo center">Trail Tails</a>
                       <ul class="right hide-on-med-and-down">
-                          <li><a href="./events.html">View</a></li>
-                          <li><a href="./form.html">Create</a></li>
-                          <li><a href="./home-page.html">Home</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/form">Create</a></li>
+                        <li><a href="/events">View</a></li>
                       </ul>
               
                       <ul id="nav-mobile" class="sidenav">
-                          <li><a href="./home-page.html">Home</a></li>
-                          <li><a href="./form.html">Create</a></li>
-                          <li><a href="./events.html">View</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/form">Create</a></li>
+                        <li><a href="/events">View</a></li>
                       </ul>
                       <a href="./home-page.html" data-target="nav-mobile" class="sidenav-trigger"><i
                               class="material-icons">menu</i></a>
@@ -106,32 +106,12 @@
 
 
     <!--  Scripts-->
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-
-            $("#submit").on('click', function (event) {
-                event.preventDefault();
-
-                var userInput = {
-                    userName: $('#userName').val().trim(),
-                    petName: $('#petName').val().trim(),
-                    breed: $('#breed').val().trim(),
-                    location: $('#location').val().trim(),
-                    date: $('#date').val().trim(),
-                    time: $('#time').val().trim()
-
-
-                }
-                console.log(userInput);
-            })
-        });
+    
     </script>
 
-
-    <script src="../js/materialize.js"></script>
-    <script src="../js/init.js"></script>
-
+    <script src="./js/materialize.js"></script>
+    <script src="./js/init.js"></script>
+    <script src = "../js/form.js"></script>
 </body>
 
 </html>

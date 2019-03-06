@@ -1,39 +1,27 @@
-var db = require("../models");
+var path = require("path");
 
-module.exports = function (app) {
-  // Load index page
-  app.get("/", function (req, res) {
-    db.Event.findAll({})
-    .then(function (dbEvents) {
-      res.render("index", {
-        msg: "Welcome!",
-        events: dbEvents
-      });
-    })
-    .catch(function(err){
-      console.error(err);
-    });
+// Routes
+// =============================================================
+module.exports = function(app) {
+
+  // Each of the below routes just handles the HTML page that the user gets sent to.
+
+  // index route loads view.html
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/home-page.html"));
   });
 
-  // Load event pagee by id
-  app.get("/event/:id", function (req, res) {
-    db.Event.findOne({
-      where: {
-        id: req.params.id
-      }
-    })
-      .then(function (dbEvent) {
-        res.render("event", {
-          event: dbEvent
-        });
-      })
-      .catch(function (err) {
-        console.error(err);
-      });
+  app.get("/events", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/events.html"));
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
-    res.render("404");
+  // blog route loads blog.html
+  app.get("/form", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/form.html"));
   });
+
+  app.get("/discussion", function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/discussion.html"));
+  });
+
 };
