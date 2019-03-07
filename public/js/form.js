@@ -1,4 +1,5 @@
-$(document).ready(function () {
+
+/*$(document).ready(function () {
 
     $("#submit").on('click', function (event) {
         event.preventDefault();
@@ -15,10 +16,11 @@ $(document).ready(function () {
         }
         console.log(userInput);
         $.post("/api/posts/", userInput, function() {
-            window.location.href = "/discussion";
+            //window.location.href = "/discussion";
           });
         
-   var newEvent = ("<div>");
+   
+ var newEvent = ("<div>");
     var newDiv = ("<div>");
     newDiv.addClass("card-stacked");
     var contentDiv = ("<div>");
@@ -53,3 +55,4 @@ $(document).ready(function () {
 });
 
 });
+*/
