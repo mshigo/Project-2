@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Event Page</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="style.css">
   <style>
-  body{
-  background-image: url("./images/dog2.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-image: cover;
-  }
+    body {
+      background-image: url("./images/dog2.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-image: cover;
+    }
   </style>
 </head>
+
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo center">Trail Tails</a>
+  <main>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo center">Trail Tails <i
+            class="material-icons medium brown-text">
+            pets
+          </i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="/">Home</a></li>
-            <li><a href="/form">Create</a></li>
-            <li><a href="/events">View</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/form">Create</a></li>
+          <li><a href="/events">View</a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/form">Create</a></li>
-            <li><a href="/events">View</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/form">Create</a></li>
+          <li><a href="/events">View</a></li>
         </ul>
         <a href="./home-page.html" data-target="nav-mobile" class="sidenav-trigger"><i
                 class="material-icons">menu</i></a>
@@ -47,15 +53,28 @@
           <div id = "eventContainer"></div>
           
         
+            class="material-icons">menu</i></a>
+      </div>
+    </nav>
+    <div id="index-banner" class="parallax-container-daniel">
+      <div class="section no-pad-bot">
+        <div class="container" id="eventBody">
+          <br><br>
+          <h2 class="header center">Current Events</h2>
+          <div id="eventContainer">
+            
+  </main>
+
   <footer class="page-footer teal">
 
   </footer>
 
-  
+
   <!--  Scripts-->
-  
+
   <script src="../js/materialize.js"></script>
   <script src="../js/init.js"></script>
+
   <script src = "../js/form.js"></script>
   <script src = "../js/event.js"></script>
 
@@ -63,3 +82,4 @@
   
   </body>
 </html>
+
