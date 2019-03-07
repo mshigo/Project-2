@@ -1,51 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Discussion Page</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- CSS  -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="css/materialize.css"
-      type="text/css"
-      rel="stylesheet"
-      media="screen,projection"
-    />
-    <link
-      href="css/style.css"
-      type="text/css"
-      rel="stylesheet"
-      media="screen,projection"
-    />
-    <style>
-      img {
-        position: relative;
-        left: 0px;
-        top: 0px;
-        z-index: 3;
-      }
-    </style>
-  </head>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discussion Page</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <body>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <style>
+    img {
+      position: relative;
+      left: 0px;
+      top: 0px;
+      z-index: 3;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
     <!--    Nav Bar     -->
     <nav class="white" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo center"
-          >Trail Tails  <i class="material-icons medium brown-text">
+        <a id="logo-container" href="#" class="brand-logo center">Trail Tails <i
+            class="material-icons medium brown-text">
             pets
-            </i></a
-        >
+          </i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="/">Home</a></li>
-            <li><a href="/form">Create</a></li>
-            <li><a href="/events">View</a></li>>
+          <li><a href="/form">Create</a></li>
+          <li><a href="/events">View</a></li>>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
@@ -53,12 +41,8 @@
           <li><a href="/form">Create</a></li>
           <li><a href="/events">View</a></li>
         </ul>
-        <a
-          href="./home-page.html"
-          data-target="nav-mobile"
-          class="sidenav-trigger"
-          ><i class="material-icons">menu</i></a
-        >
+        <a href="./home-page.html" data-target="nav-mobile" class="sidenav-trigger"><i
+            class="material-icons">menu</i></a>
       </div>
     </nav>
     <!-- MAIN CONTAINER -->
@@ -77,17 +61,12 @@
                   <div class="card-content card-height2">
                     <h6>Breeds Allowed:</h6>
                     <h6>Date & Time:</h6>
-                    <h6 >Name:</h6>
+                    <h6>Name:</h6>
                     <h6>Pet Name:</h6>
                     <h6 id="count"></h6>
                   </div>
                   <!--    GOING BUTTON START --->
-                  <button
-                    class="btn waves-effect waves-light center"
-                    type="submit"
-                    name="action"
-                    id="submit"
-                  >
+                  <button class="btn waves-effect waves-light center" type="submit" name="action" id="submit">
                     Join Event
                     <i class="material-icons right">add_circle_outline</i>
                   </button>
@@ -102,43 +81,25 @@
 
               <h6 class="responses">Don't Forget to Check the Weather</h6>
               <div class="card reveal">
-                <div
-                  class="card-image waves-effect waves-block waves-light"
-                ></div>
+                <div class="card-image waves-effect waves-block waves-light"></div>
                 <div class="card-content">
                   <h5 class="center"></h5>
 
                   <div id="container">
                     <div data-search="zip" id="cityDiv"></div>
                     <form id="user-form activator">
-                      <label for="user-input" id="search"
-                        >Search City Weather</label
-                      >
-                      <i
-                        class="card-title activator grey-text text-darken-4 material-icons right ab"
-                        >search</i
-                      >
-                      <input
-                        type="add-city"
-                        id="city"
-                        type="text"
-                        placeholder="Enter Zip Code"
-                      />
-                      <img
-                        src="images/front-page_small.jpg"
-                        class="weatherpic responsive"
-                      />
+                      <label for="user-input" id="search">Search City Weather</label>
+                      <i class="card-title activator grey-text text-darken-4 material-icons right ab">search</i>
+                      <input type="add-city" id="city" type="text" placeholder="Enter Zip Code" />
+                      <img src="images/front-page_small.jpg" class="weatherpic responsive" />
                     </form>
                   </div>
                 </div>
                 <!-- CARD END -->
                 <!-- CARD REVEAL -->
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4"
-                    >Forecast<i class="material-icons right ab" type="button"
-                      >close</i
-                    ></span
-                  >
+                  <span class="card-title grey-text text-darken-4">Forecast<i class="material-icons right ab"
+                      type="button">close</i></span>
                   <div class="weather activator">
                     <p class="light wea"></p>
                   </div>
@@ -150,147 +111,139 @@
           <!--    WEATHER API END     -->
           <!--     DOG BACKGROUND PICTURE START  -->
           <!-- <div class="background-picture"> -->
-            <!--   RESPONSE PORTION START  -->
-            <div class="col s12 m6">
-              <div class="icon-block">
-                <h2 class="center brown-text">
-                  <i class="material-icons">pets</i>
-                </h2>
-                <!-- WRITE A RESPONSE START -->
+          <!--   RESPONSE PORTION START  -->
+          <div class="col s12 m6">
+            <div class="icon-block">
+              <h2 class="center brown-text">
+                <i class="material-icons">pets</i>
+              </h2>
+              <!-- WRITE A RESPONSE START -->
 
-                <h6 class="responses">Write a Comment</h6>
-                <div class="card horizontal">
-                  <div class="card-stacked">
-                    <div class="card-content card-height2">
-                      <form id="myForm">
-                        <input
-                          type="text"
-                          id="text"
-                          maxlength="60"
-                          placeholder="60 Character Limit"
-                        /><br />
-                      </form>
-                    </div>
-                    <!--    SUBMIT BUTTON START --->
-                    <button
-                      class="btn waves-effect waves-light"
-                      type="submit"
-                      name="action"
-                      id="submit2"
-                    >
-                      Submit
-                      <i class="material-icons right">send</i>
-                    </button>
-                    <!--    SUBMIT BUTTON END --->
+              <h6 class="responses">Write a Comment</h6>
+              <div class="card horizontal">
+                <div class="card-stacked">
+                  <div class="card-content card-height2">
+                    <form id="myForm">
+                      <input type="text" id="text" maxlength="60" placeholder="60 Character Limit" /><br />
+                    </form>
                   </div>
+                  <!--    SUBMIT BUTTON START --->
+                  <button class="btn waves-effect waves-light" type="submit" name="action" id="submit2">
+                    Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+                  <!--    SUBMIT BUTTON END --->
                 </div>
-                <!-- WRITE A RESPONSE END -->
+              </div>
+              <!-- WRITE A RESPONSE END -->
 
-                <!-- RESPONSE EXAMPLE 1 START -->
-                <h2 class="center brown-text">
-                  <i class="material-icons">comment</i>
-                </h2>
-                <h6 class="responses Teal-text">Comments</h6>
-                <!-- <div class="card horizontal">
+              <!-- RESPONSE EXAMPLE 1 START -->
+              <h2 class="center brown-text">
+                <i class="material-icons">comment</i>
+              </h2>
+              <h6 class="responses Teal-text">Comments</h6>
+              <!-- <div class="card horizontal">
                   <div class="card-stacked">
                     <div class="card-content card-height">
                       <h6> -->
-                <div id="comment-cards"></div>
-                <!-- </h6>
+              <div id="comment-cards"></div>
+              <!-- </h6>
                     </div>
                   </div>
                 </div> -->
-                <!-- RESPONSE EXAMPLE 1 END  -->
-              </div>
+              <!-- RESPONSE EXAMPLE 1 END  -->
             </div>
-            <!--  RESPONSE PORTION END   -->
           </div>
-          <!-- DOG PICTURE END -->
+          <!--  RESPONSE PORTION END   -->
         </div>
+        <!-- DOG PICTURE END -->
       </div>
     </div>
-    <!--    FOOTER   -->
-    <footer class="page-footer teal"></footer>
+    </div>
+  </main>
+  <!--    FOOTER   -->
+  <footer class="page-footer teal"></footer>
 
-    <!--  SCRIPTS   -->
+  <!--  SCRIPTS   -->
 
-    <script src="../js/materialize.js"></script>
-    <script src="../js/init.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
 
-    <!-- script for weather API -->
-    <script type="text/javascript">
-      $(".ab").on("click", function(event) {
-        event.preventDefault();
-        $("p").remove();
+  <!-- script for weather API -->
+  <script type="text/javascript">
+    $(".ab").on("click", function (event) {
+      event.preventDefault();
+      $("p").remove();
 
-        var zipQuery = $("#city").val();
-        console.log(zipQuery);
+      var zipQuery = $("#city").val();
+      console.log(zipQuery);
 
-        var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zipQuery},us&appid=f31d7f506fe23d7e12900adf7560d4eb&units=imperial`;
-        console.log(queryURL);
-        $.ajax({
-          url: queryURL,
-          method: "GET"
-        }).done(function(response) {
-          console.log(response);
-          $("#cityDiv").html("");
+      var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zipQuery},us&appid=f31d7f506fe23d7e12900adf7560d4eb&units=imperial`;
+      console.log(queryURL);
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).done(function (response) {
+        console.log(response);
+        $("#cityDiv").html("");
 
-          // use cityDiv and city to display city searched to user
-          var cityDiv = "";
-          var city = response.city.name;
+        // use cityDiv and city to display city searched to user
+        var cityDiv = "";
+        var city = response.city.name;
 
-          $(".weather").append(
-            "<p>Minimum Temperature (°F): " +
-              response.list[0].main.temp_min +
-              "</p>"
-          );
-          $(".weather").append(
-            "<p>Maximum Temperature (°F): " +
-              response.list[0].main.temp_max +
-              "</p>"
-          );
-          $(".weather").append(
-            "<p>Weather Conditions: " +
-              response.list[0].weather[0].description +
-              "</p>"
-          );
-          $(".weather").append(
-            "<p>Wind Speed: " + response.list[0].wind.speed + "</p>"
-          );
-          $(".weather").prepend(
-            "<h5>The current weather conditions in " +
-              response.city.name +
-              "</h5 >"
-          );
-        });
-
-        $("#cityDiv").html(cityDiv);
-      });
-
-      //count button
-      var count = 0;
-      $("#submit").click(function() {
-        count++;
-        $("#count").html("Going: " + count);
-      });
-
-      //comment card button
-      $("#submit2").click(function() {
-        event.preventDefault();
-
-        var input = {
-          comment: $("#text")
-            .val()
-            .trim()
-        };
-        console.log(input);
-        $("#comment-cards").prepend(
-          "<div class=card horizontal><div class=card-stacked><div class=card-content card-height>" +
-            input.comment +
-            "</div></h6></div></div></div>"
+        $(".weather").append(
+          "<p>Minimum Temperature (°F): " +
+          response.list[0].main.temp_min +
+          "</p>"
         );
-        $("#myForm")[0].reset();
+        $(".weather").append(
+          "<p>Maximum Temperature (°F): " +
+          response.list[0].main.temp_max +
+          "</p>"
+        );
+        $(".weather").append(
+          "<p>Weather Conditions: " +
+          response.list[0].weather[0].description +
+          "</p>"
+        );
+        $(".weather").append(
+          "<p>Wind Speed: " + response.list[0].wind.speed + "</p>"
+        );
+        $(".weather").prepend(
+          "<h5>The current weather conditions in " +
+          response.city.name +
+          "</h5 >"
+        );
       });
-    </script>
-  </body>
+
+      $("#cityDiv").html(cityDiv);
+    });
+
+    //count button
+    var count = 0;
+    $("#submit").click(function () {
+      count++;
+      $("#count").html("Going: " + count);
+    });
+
+    //comment card button
+    $("#submit2").click(function () {
+      event.preventDefault();
+
+      var input = {
+        comment: $("#text")
+          .val()
+          .trim()
+      };
+      console.log(input);
+      $("#comment-cards").prepend(
+        "<div class=card horizontal><div class=card-stacked><div class=card-content card-height>" +
+        input.comment +
+        "</div></h6></div></div></div>"
+      );
+      $("#myForm")[0].reset();
+    });
+  </script>
+</body>
+
 </html>
