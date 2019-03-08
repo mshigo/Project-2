@@ -30,7 +30,17 @@ module.exports = function(app) {
         res.json(dbPost);
       });
   });
-
+// Get route for retrieving a single post
+app.get("/api/posts/:id", function(req, res) {
+  db.Post.findOne({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(dbPost) {
+    console.log(dbPost);
+    res.json(dbPost);
+  });
+});
   // DELETE route for deleting posts
   app.delete("/api/posts/:id", function(req, res) {
     db.Post.destroy({
