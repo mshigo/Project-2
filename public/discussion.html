@@ -58,7 +58,7 @@
               <h6 class="responses">Event Details</h6>
               <div class="card horizontal">
                 <div class="card-stacked">
-                  <div class="card-content card-height2">
+                  <div class="card-content card-height2" id = "infoCard">
                     <h6>Breeds Allowed:</h6>
                     <h6>Date & Time:</h6>
                     <h6>Name:</h6>
@@ -66,7 +66,7 @@
                     <h6 id="count"></h6>
                   </div>
                   <!--    GOING BUTTON START --->
-                  <button class="btn waves-effect waves-light center" type="submit" name="action" id="submit">
+                  <button class="btn waves-effect waves-light center" type="submit" name="action" id="infoSubmit">
                     Join Event
                     <i class="material-icons right">add_circle_outline</i>
                   </button>
@@ -221,7 +221,7 @@
 
     //count button
     var count = 0;
-    $("#submit").click(function () {
+    $("#infoSubmit").click(function () {
       count++;
       $("#count").html("Going: " + count);
     });
@@ -245,5 +245,7 @@
     });
   </script>
 </body>
+<script src = "../js/event.js"></script>
+
 
 </html>
