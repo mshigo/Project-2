@@ -10,6 +10,9 @@ module.exports = function(app) {
     db.Post.findAll({})
       .then(function(dbPost) {
         res.json(dbPost);
+      })
+      .catch(function(err){
+        console.error(err);
       });
   });
 
@@ -28,6 +31,9 @@ module.exports = function(app) {
     })
       .then(function(dbPost) {
         res.json(dbPost);
+      })
+      .catch(function(err){
+        console.error(err);
       });
   });
 // Get route for retrieving a single post
@@ -39,6 +45,9 @@ app.get("/api/posts/:id", function(req, res) {
   }).then(function(dbPost) {
     console.log(dbPost);
     res.json(dbPost);
+  })
+  .catch(function(err){
+    console.error(err);
   });
 });
   // DELETE route for deleting posts
@@ -50,6 +59,9 @@ app.get("/api/posts/:id", function(req, res) {
     })
       .then(function(dbPost) {
         res.json(dbPost);
+      })
+      .catch(function(err){
+        console.error(err);
       });
   });
 
@@ -63,6 +75,9 @@ app.get("/api/posts/:id", function(req, res) {
       })
       .then(function(dbPost) {
         res.json(dbPost);
+      })
+      .catch(function(err){
+        console.error(err);
       });
   });
 };
