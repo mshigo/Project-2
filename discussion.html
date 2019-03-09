@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Discussion Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <style>
+    body{
+        background-image: url("lab-pic.JPG");
+    }
+    </style>
+</head>
+
+<body>
+    <!--    Nav Bar     -->
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo center">Trail Tails</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="./home-page.html" class="nav-font">Home</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="#" class="nav-font">Navbar Link</a></li>
+            </ul>
+            <a href="./home-page.html" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        <div class="section">
+
+            <!--   WEATHER API    -->
+            <div class="row weather">
+                <div class="col s12 m6">
+                    <div class="icon-block">
+                        <h2 class="center brown-text"><i class="material-icons">cloud_queue</i></h2>
+                        <h5 class="center">Don't Forget to Check the Weather</h5>
+
+                        <p class="light">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis ipsam magni dolores eveniet,
+                            ab tempora maxime, vel repudiandae possimus asperiores nobis iste eligendi vitae enim ex, id
+                            blanditiis aliquam quibusdam.
+                        </p>
+                    </div>
+                </div>
+                <!--    WEATHER API END     -->
+                <!--     DOG BACKGROUND PICTURE START  -->
+                <div class="background-picture">
+                    <!--   RESPONSE PORTION START  -->
+                    <div class="col s12 m6">
+                        <div class="icon-block">
+                            <h2 class="center brown-text"><i class="material-icons">pets</i></h2>
+                            <!-- WRITE A RESPONSE START -->
+                            <h6 class="responses">Write a Response</h6>
+                            <div class="card horizontal">
+                                <div class="card-stacked">
+                                    <div class="card-content card-height">
+                                        <form>
+                                            <input type="text" placeholder="Start a discussion."><br>
+                                          </form> 
+                                    </div>
+                                    <!--    SUBMIT BUTTON START --->
+                                    <button class="btn waves-effect waves-light" type="submit" name="action"
+                                        id="submit">Submit
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                    <!--    SUBMIT BUTTON END --->
+                                </div>
+                            </div>
+                            <!-- WRITE A RESPONSE END -->
+
+                            <!-- RESPONSE EXAMPLE 1 START -->
+                            <h6 class="responses brown-text">User Name</h6>
+                            <div class="card horizontal">
+                                <div class="card-stacked">
+                                    <div class="card-content card-height">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- RESPONSE EXAMPLE 1 END  -->
+
+                            <!-- RESPONSE EXAMPLE 2 START -->
+                            <h6 class="responses brown-text">User Name</h6>
+                            <div class="card horizontal">
+                                <div class="card-stacked">
+                                    <div class="card-content card-height">
+                                        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- RESPONSE EXAMPLE 2 END  -->
+                        </div>
+                    </div>
+                    <!--  RESPONSE PORTION END   -->
+
+
+                </div>
+                <!-- DOG PICTURE END -->
+            </div>
+        </div>
+
+    </div>
+    <!--    FOOTER   -->
+    <footer class="page-footer teal">
+    </footer>
+
+
+    <!--  SCRIPTS   -->
+
+
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+</body>
+
+</html>
